@@ -1,7 +1,7 @@
 using System;
 namespace task01;
 
-public class Class1
+public static class StringExtensions
 {
     public static bool IsPalindrome(this string s)
     {
