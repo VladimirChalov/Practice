@@ -6,7 +6,7 @@ public static class StringExtensions
     public static bool IsPalindrome(this string s)
     {
         if (string.IsNullOrEmpty(s))
-            return true;
+            return false;
 
         var transformation = string.Concat(s.ToLower().Where(c => !char.IsWhiteSpace(c) && !char.IsPunctuation(c)));
 
