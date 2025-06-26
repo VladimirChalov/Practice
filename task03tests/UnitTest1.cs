@@ -1,5 +1,7 @@
 using Xunit;
-
+using System.Linq;
+using task02;
+using Moq;
 public class IteratorTests
 {
     [Fact]
