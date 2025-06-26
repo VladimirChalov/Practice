@@ -6,9 +6,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-</Project>
-
-<ItemGroup>
+ <ItemGroup>
     <PackageReference Include="Moq" Version="4.18.4" />
   </ItemGroup>
 </Project>
