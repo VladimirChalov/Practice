@@ -14,7 +14,7 @@ namespace task03
         public IEnumerator<T> GetEnumerator() => _items.GetEnumerator();
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-        public static IEnumerable<T> GetReverseEnumerator() => _items.AsEnumerable().Reverse();
+        public IEnumerable<T> GetReverseEnumerator() => _items.AsEnumerable().Reverse();
 
         public static IEnumerable<int> GenerateSequence(int start, int count) => Enumerable.Range(0, count).Select(i => start + i);
 
