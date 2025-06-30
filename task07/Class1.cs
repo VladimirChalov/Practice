@@ -26,20 +26,21 @@ namespace task07
         }
     }
 
-    [DisplayName("Пример")]
+    [DisplayName("Пример класса")]
     [Version(1, 0)]
     public class SampleClass
     {
         public SampleClass()
         {
-            Text = ""; 
         }
 
-        [DisplayName("Число")]
+        [DisplayName("Числовое свойство")]
         public int Number {get; set;}
 
-        [DisplayName("Текст")]
-        public string Text {get; set;} 
+        [DisplayName("Тестовый метод")]  
+        public void TestMethod()
+        {
+        }
     }
 
     public class ReflectionHelper
