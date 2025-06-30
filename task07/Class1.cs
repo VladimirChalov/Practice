@@ -6,7 +6,7 @@ namespace task07
 {
     public class DisplayNameAttribute : Attribute
     {
-        public string DisplayName { get; }
+        public string DisplayName {get;}
 
         public DisplayNameAttribute(string name)
         {
@@ -16,8 +16,8 @@ namespace task07
 
     public class VersionAttribute : Attribute
     {
-        public int Major { get; }
-        public int Minor { get; }
+        public int Major {get;}
+        public int Minor {get;}
 
         public VersionAttribute(int a, int b)
         {
@@ -30,11 +30,16 @@ namespace task07
     [Version(1, 0)]
     public class SampleClass
     {
+        public SampleClass()
+        {
+            Text = ""; 
+        }
+
         [DisplayName("Число")]
-        public int Number { get; set; }
+        public int Number {get; set;}
 
         [DisplayName("Текст")]
-        public string Text { get; set; }
+        public string Text {get; set;} 
     }
 
     public class ReflectionHelper
