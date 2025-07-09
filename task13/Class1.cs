@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization; 
 
+namespace task13
+{
 public class Subject
 {
   public string Name {get; set; }
@@ -34,5 +36,6 @@ public class Convert : JsonConverter<DateTime>
 {
     string dateString = value.ToString("yyyy-MM-dd");
     writer.WriteStringValue(dateString);
+}
 }
 }
