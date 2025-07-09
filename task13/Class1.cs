@@ -22,7 +22,7 @@ public class Convert : JsonConverter<DateTime>
 {
    string model = "yyyy-MM-dd";
 
-   public override DateTime Read(string Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+   public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 {
     string dateString = reader.GetString();
     DateTime result = DateTime.ParseExact(dateString, model, null);
