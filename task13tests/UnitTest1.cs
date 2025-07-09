@@ -6,7 +6,8 @@ using task13;
 
 namespace task13tests;
 
-class task13tests{
+public class StudentTests
+{
     
 [Fact]
 public void Serialize_Student_Works()
