@@ -2,6 +2,9 @@ namespace Command;
 
 public interface ICommand
 {
-    bool IsCompleted();
     void Execute();
+}
+public interface ILongRunningCommand : ICommand
+{
+    bool IsCompleted {get;}
 }
