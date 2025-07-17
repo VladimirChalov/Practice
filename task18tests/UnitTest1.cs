@@ -1,7 +1,8 @@
 using Xunit;
 using System.Threading;
 using Command;
-using task18;
+using RoundRobin;
+using IScheduler;
 
 public class Task18Tests
 {
