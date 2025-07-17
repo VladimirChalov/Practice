@@ -7,23 +7,23 @@ using Scheduler;
 public class Task18Tests
 {
     [Fact]
-    public void Should_Process_LongRunning_Command()
-    {
-        var scheduler = new RoundRobinScheduler();
-        var server = new ServerThread(scheduler);
-        server.Start();
-        
-        var longCmd = new TestLongRunningCommand(3);
-        server.Add(longCmd);
-        
-        Thread.Sleep(100);
-        Assert.False(longCmd.IsCompleted);
-        
-        Thread.Sleep(300);
-        Assert.True(longCmd.IsCompleted);
-        
-        server.Stop();
-    }
+public void Should_Process_LongRunning_Command()
+{
+    var scheduler = new RoundRobinScheduler();
+    var server = new ServerThread();
+    
+    server.Start();
+    var longCmd = new TestLongRunningCommand(3);
+    server.Add(longCmd);
+
+    Thread.Sleep(100);
+    Assert.False(longCmd.IsCompleted);
+
+    Thread.Sleep(300);
+    Assert.True(longCmd.IsCompleted);
+
+    server.Stop();
+}
 
     private class TestLongRunningCommand : ICommand, ILongRunningCommand
     {
