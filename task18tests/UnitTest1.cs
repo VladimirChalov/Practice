@@ -2,7 +2,7 @@ using Xunit;
 using System.Threading;
 using Command;
 using RoundRobin;
-using IScheduler;
+using Scheduler;
 
 public class Task18Tests
 {
