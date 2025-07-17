@@ -1,6 +1,6 @@
 using Command;
 
-namespace task18
+namespace IScheduler
 {
     public interface IScheduler
     {
