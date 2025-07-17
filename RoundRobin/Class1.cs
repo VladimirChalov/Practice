@@ -1,7 +1,7 @@
 using System.Collections.Concurrent;
 using Command;
 
-namespace task18
+namespace RoundRobin
 {
     public class RoundRobinScheduler : IScheduler
     {
