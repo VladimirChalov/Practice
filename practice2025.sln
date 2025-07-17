@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Command", "Command\Command.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerThread", "ServerThread\ServerThread.csproj", "{6C11D2E7-15DE-4930-8C0D-F6B87D0B43A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task17tests", "task17tests\task17tests.csproj", "{135F19EB-92F7-4F66-B0C8-2AC812749978}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IScheduler", "IScheduler\IScheduler.csproj", "{2557A7C6-5746-47E8-B1DB-5030DE93252A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoundRobin", "RoundRobin\RoundRobin.csproj", "{111DDC98-C7A2-420F-BC06-584CFDE202A0}"
@@ -32,10 +30,6 @@ Global
 		{6C11D2E7-15DE-4930-8C0D-F6B87D0B43A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C11D2E7-15DE-4930-8C0D-F6B87D0B43A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C11D2E7-15DE-4930-8C0D-F6B87D0B43A8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{135F19EB-92F7-4F66-B0C8-2AC812749978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{135F19EB-92F7-4F66-B0C8-2AC812749978}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{135F19EB-92F7-4F66-B0C8-2AC812749978}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{135F19EB-92F7-4F66-B0C8-2AC812749978}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2557A7C6-5746-47E8-B1DB-5030DE93252A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2557A7C6-5746-47E8-B1DB-5030DE93252A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2557A7C6-5746-47E8-B1DB-5030DE93252A}.Release|Any CPU.ActiveCfg = Release|Any CPU
