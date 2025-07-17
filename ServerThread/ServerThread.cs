@@ -3,8 +3,7 @@ using System.Collections.Concurrent;
 using System.Threading;
 using Command;
 
-namespace task17
-{
+
     public class ServerThread
     {
         public readonly ConcurrentQueue<ICommand> q = new();
@@ -78,4 +77,4 @@ namespace task17
             t.stopAfter = true;
         }
     }
-}
+
