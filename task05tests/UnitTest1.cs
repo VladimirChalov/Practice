@@ -1,5 +1,4 @@
 using Xunit;
-using Moq;
 using task05;
 
 public class TestClass
