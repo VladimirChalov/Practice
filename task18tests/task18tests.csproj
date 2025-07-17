@@ -20,9 +20,11 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
-  <ItemGroup>
+<ItemGroup>
     <ProjectReference Include="..\Command\Command.csproj" />
+    <ProjectReference Include="..\IScheduler\IScheduler.csproj" />
+    <ProjectReference Include="..\RoundRobin\RoundRobin.csproj" />
     <ProjectReference Include="..\ServerThread\ServerThread.csproj" />
-  </ItemGroup>
+</ItemGroup>
 
 </Project>
