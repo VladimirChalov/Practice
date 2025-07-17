@@ -1,4 +1,6 @@
-﻿namespace task18
+using Command;
+
+namespace task18
 {
     public interface IScheduler
     {
