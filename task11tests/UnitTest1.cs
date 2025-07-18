@@ -18,7 +18,7 @@ namespace task11tests
                     public int Div(int a, int b) => b != 0 ? a / b : throw new System.DivideByZeroException();
                 }";
 
-            _calculator = CalculatorFactory.CreateCalculator(code);
+            _calculator = CalculatorFactory.CreateInstance(code);
         }
 
         [Fact]
