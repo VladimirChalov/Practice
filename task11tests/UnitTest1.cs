@@ -1,14 +1,16 @@
 using task11;
 using Xunit;
 
-namespace Tests
+namespace task11tests
 {
-    public class Tests
+    public class CalculatorTests
     {
-        private ICalculator CreateTestCalculator()
+        private readonly ICalculator _calculator;
+
+        public CalculatorTests()
         {
             string code = @"
-                public class TestCalculator : ICalculator
+                public class Calculator : task11.ICalculator
                 {
                     public int Add(int a, int b) => a + b;
                     public int Minus(int a, int b) => a - b;
@@ -16,46 +18,37 @@ namespace Tests
                     public int Div(int a, int b) => b != 0 ? a / b : throw new System.DivideByZeroException();
                 }";
 
-            return CalculatorBuilder.CreateCalculator(code);
+            _calculator = CalculatorBuilder.CreateCalculator(code);
         }
 
         [Fact]
-        public void Should_Add_Numbers_Correctly()
+        public void Add_ShouldReturnCorrectSum()
         {
-            var calculator = CreateTestCalculator();
-            var result = calculator.Add(7, 3);
-            Assert.Equal(10, result);
+            Assert.Equal(5, _calculator.Add(2, 3));
         }
 
         [Fact]
-        public void Should_Subtract_Numbers_Correctly()
+        public void Minus_ShouldReturnCorrectDifference()
         {
-            var calculator = CreateTestCalculator();
-            var result = calculator.Minus(15, 4);
-            Assert.Equal(11, result);
+            Assert.Equal(1, _calculator.Minus(5, 4));
         }
 
         [Fact]
-        public void Should_Multiply_Numbers_Correctly() 
+        public void Mul_ShouldReturnCorrectProduct()
         {
-            var calculator = CreateTestCalculator();
-            var result = calculator.Mul(5, 6);
-            Assert.Equal(30, result);
+            Assert.Equal(6, _calculator.Mul(2, 3));
         }
 
         [Fact]
-        public void Should_Divide_Numbers_Correctly()
+        public void Div_ShouldReturnCorrectQuotient()
         {
-            var calculator = CreateTestCalculator();
-            var result = calculator.Div(20, 5);
-            Assert.Equal(4, result);
+            Assert.Equal(2, _calculator.Div(6, 3));
         }
 
         [Fact]
-        public void Should_Throw_When_Dividing_By_Zero()
+        public void Div_ByZero_ShouldThrowException()
         {
-            var calculator = CreateTestCalculator();
-            Assert.Throws<DivideByZeroException>(() => calculator.Div(10, 0));
+            Assert.Throws<DivideByZeroException>(() => _calculator.Div(1, 0));
         }
     }
 }
